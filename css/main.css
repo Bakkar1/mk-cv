@@ -1,0 +1,252 @@
+:root{
+    --overly-color: rgba(0, 0, 0, .3);
+    --default-color: #FFF;
+    --main-color: rgba(255, 152, 0, 1);
+    --ander-colo: rgba(28, 196, 117, 1);
+    --gray-color: rgb(119,119,119, 1);
+    --default-transition: all .5s ease-in-out;
+    --default-padding : 50px 0;
+    --default-fontSize : 18px;
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    height: 3000px;
+}
+.container{
+    margin: auto;
+}
+
+.visibale-xs, /*hadak elemnt ghaykon mkhfi fga3 lmedia ila l media li khtaritha lih ghayban fiha*/
+.visibale-sm,
+.visibale-md,
+.visibale-lg{
+    display: none;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clearFix{
+    clear: both;
+}
+.h1{
+    font-size: 2em;
+}
+.h2{
+    font-size: 1.5em;
+}
+
+/* start header */
+header{
+    min-height: 100vh;
+    background-color: #000;
+    color: var(--gray-color);
+    position: relative;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+header nav .logo{
+    font-size: var(--default-fontSize);
+    font-style: italic;
+}
+header nav .logo span{
+    color: var(--main-color);
+}
+header nav ul{
+    list-style: none;
+    min-width: fit-content;
+}
+header nav ul li{
+    display: inline-block;
+    margin-right: 15px;
+}
+header nav ul li.active{
+    color: var(--main-color)
+}
+header nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--default-fontSize);
+    transition: var(--default-transition);
+    text-transform: capitalize;
+    position: relative;
+}
+header nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: var(--default-transition);
+    transform: scaleX(0);
+}
+header nav ul li a:hover{
+    color: var(--main-color);
+}
+header nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+header .ik{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--main-color);
+}
+header .ik img{
+    border-radius: 50%;
+}
+header .ik .ik-content h3::first-letter{
+    text-transform: uppercase;
+}
+header .ik .ik-content .h2{
+    color: var(--default-color);
+    text-transform: uppercase;
+    background: url(../images/texg.jpg) 50% 50%;
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+header .ik .ik-content p{
+    text-transform: capitalize;
+    font-size: var(--default-fontSize);
+}
+header .ik .ik-content a{
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    margin-top: 10px;
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    transition: var(--default-transition);
+}
+header .ik .ik-content a:hover{
+    color: var(--default-color);
+    background-color: var(--main-color);
+}
+header .naar-volgend{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+header .naar-volgend:hover i{
+    transform: rotate(180deg);
+    color: var(--main-color);
+    line-height: 30px;
+    box-shadow: 0 0 1px 1px var(--main-color);
+}
+header .naar-volgend i{
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    transition: var(--default-transition);
+    font-size: 20px;
+}
+/* end header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start global media */
+@media ( max-width : 767px) and (min-width : 200px)
+{
+    .visibale-xs
+    {
+        display: block !important;
+    }
+    .hidden-xs
+    {
+        display: none !important;
+    }
+}
+@media (min-width : 768px)
+{
+    .container
+    {
+        width: 780px;
+    }
+    .visibale-sm
+    {
+        display: block !important;
+    }
+    .hidden-sm
+    {
+        display: none !important;
+    }
+}
+@media (min-width : 992px)
+{
+    .container
+    {
+        width: 1000px;
+    }
+    .visibale-md
+    {
+        display: block !important;
+    }
+    .hidden-md
+    {
+        display: none !important;
+    }
+}
+
+@media (min-width : 1200px)
+{
+    .container
+    {
+        width: 1200px;
+    }
+    .visibale-lg
+    {
+        display: block !important;
+    }
+    .hidden-lg
+    {
+        display: none !important;
+    }
+}
+/* end global media */
