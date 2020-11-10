@@ -70,6 +70,7 @@ header nav .logo span{
 header nav ul{
     list-style: none;
     min-width: fit-content;
+    min-width: -moz-fit-content;
 }
 header nav ul li{
     display: inline-block;
