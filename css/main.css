@@ -147,7 +147,7 @@ header .ik img{
     border-radius: 10px;
     max-height: 100%;
     max-width: 100%;
-    filter: grayscale(2);
+    filter: grayscale(1);
 }
 header .ik .ik-content h3::first-letter{
     text-transform: uppercase;
