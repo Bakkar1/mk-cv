@@ -1,5 +1,5 @@
 :root{
-    --overly-color: rgba(0, 0, 0, .3);
+    --overly-color: rgba(0, 0, 0, .8);
     --default-color: #FFF;
     --main-color: rgba(255, 152, 0, 1);
     --ander-colo: rgba(28, 196, 117, 1);
@@ -12,7 +12,7 @@
 }
 *{
     box-sizing: border-box;
-    
+
 }
 a{
     color: inherit;
@@ -21,7 +21,6 @@ a{
 body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    height: 3000px;
 }
 .container{
     margin: auto;
@@ -144,6 +143,7 @@ header .ik img{
     max-height: 100%;
     max-width: 100%;
     filter: grayscale(1);
+    transition: var(--default-transition);
 }
 header .ik .ik-content h3::first-letter{
     text-transform: uppercase;
@@ -201,6 +201,13 @@ header .naar-volgend i{
 }
 
 /* header media */
+@media(min-width : 501px){
+
+}
+@media(min-width : 1001px){
+
+}
+
 @media ( max-width : 767px) and (min-width : 200px),
 (min-width : 768px) and (max-width: 991px)
 {
@@ -275,6 +282,16 @@ header .naar-volgend i{
         justify-content: space-evenly;
         align-items: center;
     }
+    header .ik img:hover{
+        box-shadow: 0px 16px 30px 0px var(--main-color),
+        0px -16px 30px 0px var(--main-color);
+    }
+    header .ik img:active{
+        box-shadow: 0 0 0 0;
+        border: 1px solid var(--main-color);
+        border-radius: 50%;
+        padding: 20px;
+    }
 }
 
 @media (min-width : 1200px)
@@ -283,46 +300,46 @@ header .naar-volgend i{
 }
 /* end header */
 /*================================================================================*/
-/* start about me */
-article.about-me{
+/* start over me */
+article.over-me{
     padding: var(--default-padding);
     --aboute-mecolor: rgb(142,142,142);
     background-color: rgb(142,142,142, .2);
     font-family: 'Lato', sans-serif
 }
-article.about-me h2{
+article.over-me h2{
 
 }
-article.about-me .content{
+article.over-me .content{
     display: flex;
 }
-article.about-me .content section{
+article.over-me .content section{
     border-radius: 5px;
 }
-article.about-me .content section:first-of-type{
+article.over-me .content section:first-of-type{
     background-color: var(--default-color);
 }
-article.about-me .content section:first-of-type div{
+article.over-me .content section:first-of-type div{
     border-radius: 5px 5px 0 0;
 }
-article.about-me .content section:first-of-type img{
+article.over-me .content section:first-of-type img{
     transition: var(--default-transition);
     border-radius: 5px 5px 0 0;
     width: 100%;
     height: 100%;
 }
-article.about-me .content section:first-of-type ul{
+article.over-me .content section:first-of-type ul{
     list-style: none;
     width: fit-content;
     padding: 0;
     margin: 30px auto 20px;
 }
-article.about-me .content section:first-of-type ul li{
+article.over-me .content section:first-of-type ul li{
     display: inline-block;
     text-align: center;
     margin-right: 5px;
 }
-article.about-me .content section:first-of-type ul li i{
+article.over-me .content section:first-of-type ul li i{
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -330,30 +347,30 @@ article.about-me .content section:first-of-type ul li i{
     border-radius: 50%;
     transition: var(--default-transition);
 }
-article.about-me .content section:first-of-type ul li i:hover{
+article.over-me .content section:first-of-type ul li i:hover{
     background-color: var(--main-color);
     color: var(--default-color);
     border-color: var(--main-color);
     transform: scale(1.1);
 }
-article.about-me .content section:last-of-type{
+article.over-me .content section:last-of-type{
     padding: 20px;
     color : var(--aboute-mecolor);
     background-color: var(--default-color);
 }
-article.about-me .content section:last-of-type h3{
+article.over-me .content section:last-of-type h3{
     text-transform: capitalize;
     color: var(--main-color);
     font-size: var(--default-fontSize);
 }
-article.about-me .content section:last-of-type .info{
+article.over-me .content section:last-of-type .info{
     display: flex;
     flex-wrap: wrap;
 }
-article.about-me .content section:last-of-type .info p{
+article.over-me .content section:last-of-type .info p{
     font-size: 14px;
 }
-article.about-me .content section:last-of-type .info p span{
+article.over-me .content section:last-of-type .info p span{
     position: relative;
     padding-left: 20px;
     font-weight: bold;
@@ -361,30 +378,30 @@ article.about-me .content section:last-of-type .info p span{
     color: var(--black-color);
     text-transform: capitalize;
 }
-article.about-me .content section:last-of-type .info p span::before{
+article.over-me .content section:last-of-type .info p span::before{
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
     position: absolute;
     bottom: 0;
     left: -5px;
 }
-article.about-me .content section:last-of-type .info p:first-of-type span::before{
+article.over-me .content section:last-of-type .info p:first-of-type span::before{
     content: '\f007';
 }
-article.about-me .content section:last-of-type .info p:nth-of-type(2) span::before{
+article.over-me .content section:last-of-type .info p:nth-of-type(2) span::before{
     content: '\f879';
 }
-article.about-me .content section:last-of-type .info p:nth-of-type(3) span::before{
+article.over-me .content section:last-of-type .info p:nth-of-type(3) span::before{
     content: '\f0e0';
 }
-article.about-me .content section:last-of-type .info p:nth-of-type(4) span::before{
+article.over-me .content section:last-of-type .info p:nth-of-type(4) span::before{
     content: '\f3c5';
 }
-article.about-me .content section:last-of-type .buttons{
+article.over-me .content section:last-of-type .buttons{
     margin-top: 20px;
 }
-article.about-me .content section:last-of-type .buttons a:first-of-type,
-article.about-me .content section:last-of-type .buttons a button{
+article.over-me .content section:last-of-type .buttons a:first-of-type,
+article.over-me .content section:last-of-type .buttons a button{
     padding: 10px 20px;
     color: var(--default-color);
     border-radius: 10px;
@@ -393,20 +410,20 @@ article.about-me .content section:last-of-type .buttons a button{
     font-size: var(--default-fontSize);
     cursor: pointer;
 }
-article.about-me .content section:last-of-type .buttons a:first-of-type{
+article.over-me .content section:last-of-type .buttons a:first-of-type{
     border: 1px solid var(--main-color);
     background-color: var(--main-color);
 }
-article.about-me .content section:last-of-type .buttons a:first-of-type:hover{
+article.over-me .content section:last-of-type .buttons a:first-of-type:hover{
     border-color: var(--gray-color);
     background-color: var(--gray-color);
-    transform: scale(1.1);
+    transform: scale(1.1) ;
 }
-article.about-me .content section:last-of-type .buttons a button{
+article.over-me .content section:last-of-type .buttons a button{
     border: 1px solid var(--gray-color);
     background-color: var(--gray-color);
 }
-article.about-me .content section:last-of-type .buttons a button:hover{
+article.over-me .content section:last-of-type .buttons a button:hover{
     border: 1px solid var(--main-color);
     background-color: var(--main-color);
     transform: scale(1.1);
@@ -415,12 +432,12 @@ article.about-me .content section:last-of-type .buttons a button:hover{
 
 @media ( max-width : 767px) and (min-width : 200px)
 {
-    article.about-me .content section{
+    article.over-me .content section{
         width: 95% !important;
     }
-    article.about-me .content section:last-of-type .buttons a:first-of-type,
-    article.about-me .content section:last-of-type .buttons a button{
-        display: block ;
+    article.over-me .content section:last-of-type .buttons a:first-of-type,
+    article.over-me .content section:last-of-type .buttons a button{
+        display: block !important;
         width: 60%;
         margin:10px auto !important;
         text-align: center;
@@ -429,50 +446,51 @@ article.about-me .content section:last-of-type .buttons a button:hover{
 @media ( max-width : 767px) and (min-width : 200px),
 (min-width : 768px)
 {
-    article.about-me .content{
+    article.over-me .content{
         flex-wrap: wrap;
         justify-content: center;
     }
-    article.about-me .content section{
+    article.over-me .content section{
         width: 90%;
     }
-    article.about-me .content section:first-of-type{
+    article.over-me .content section:first-of-type{
         margin-bottom: 20px;
         text-align: center;
     }
-    article.about-me .content section:last-of-type .info p{
+    article.over-me .content section:last-of-type .info p{
         width: 80%;
     }
-    article.about-me .content section:last-of-type .buttons a:first-of-type{
+    article.over-me .content section:last-of-type .buttons a:first-of-type{
         margin-right: 15px;
+        display: inline-block;
     }
 }
 
 @media (min-width : 992px)
 {
-    article.about-me .content section:first-of-type{
+    article.over-me .content section:first-of-type{
         width: 40%;
     }
-    article.about-me .content section:first-of-type div{
+    article.over-me .content section:first-of-type div{
         overflow: hidden;
         width: 100%;
         height: 400px;
     }
-    article.about-me .content section:first-of-type img:hover{
+    article.over-me .content section:first-of-type img:hover{
         transform: scale(1.2);
     }
-    article.about-me .content section:last-of-type{
+    article.over-me .content section:last-of-type{
         width: calc(60% - 40px);
         margin-left: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
-    article.about-me .content section:last-of-type .info p{
+    article.over-me .content section:last-of-type .info p{
         width: calc(50% - 2%);
         margin-right: 2%;
     }
-    article.about-me .content section:last-of-type .buttons a:first-of-type{
+    article.over-me .content section:last-of-type .buttons a:first-of-type{
         margin-right: 20px;
     }
 }
@@ -481,30 +499,13 @@ article.about-me .content section:last-of-type .buttons a button:hover{
 {
 
 }
-/* end about me */
+/* end over me */
 /*================================================================================*/
-/* start RESUME */
+/* start studie-geschiedenis */
 .timeline{
     padding: var(--default-padding);
     background-color: #F9F9F9;
     --boxShadow-color:  #dde5ee;
-}
-.timeline .werk-geschiedenis,
-.timeline .studie-geschiedenis{
-    background-color: var(--default-color);
-    padding: var(--default-padding);
-
-}
-.timeline .werk-geschiedenis h4,
-.timeline .studie-geschiedenis h4{
-    width: fit-content;
-    width: -moz-fit-content;
-    margin: 10px auto 20px;
-    text-transform: capitalize;
-    font-size: var(--default-fontSize);
-}
-.timeline .werk-geschiedenis{
-    margin-bottom: 100px;
 }
 .timeline .timeline-content{
     position: relative;
@@ -665,7 +666,16 @@ article.about-me .content section:last-of-type .buttons a button:hover{
     .timeline .timeline-content .right .content::after{
         left: -20px;
         border-color: transparent var(--default-color) transparent transparent  ;
-        /*border-color: #03A9F4 white; bach tafham */
+    }
+    .timeline .timeline-content .left .content::after,
+    .timeline .timeline-content .right .content::after{
+        top: 50%;
+        transform:  translateY(-50%);
+        transition: var(--default-transition);
+    }
+    .timeline .timeline-content .left .content:hover::after,
+    .timeline .timeline-content .right .content:hover::after{
+        top: 60% !important;
     }
 }
 
@@ -694,18 +704,186 @@ article.about-me .content section:last-of-type .buttons a button:hover{
         top: 50%;
         transform:  translateY(-50%);
     }
-    .timeline .timeline-content .left .content::after,
-    .timeline .timeline-content .right .content::after{
-        top: 50%;
-        transform:  translateY(-50%);
-        transition: var(--default-transition);
-    }
     .timeline .timeline-content .left .content:hover::after,
     .timeline .timeline-content .right .content:hover::after{
         top: 75% !important;
     }
 }
-/* end RESUME */
+/* end studie-geschiedenis */
+/*=================================================================================*/
+/* satart vaardigheden */
+.vaardigheden{
+    padding: var(--default-padding);
+    background-image: url('../images/skills.jpg');
+    background-color: var(--overly-color);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+}
+.vaardigheden > h3{
+    color: var(--default-color)
+}
+.vaardigheden > h3::after{
+    background-color: var(--default-color);
+}
+.vaardigheden .vh-box{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--default-color);
+}
+.vaardigheden .vh-box label{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.vaardigheden .vh-box .vh-cell{
+    height: 10px;
+    border-radius: 0px 200px 200px 0px ;
+    border: 1px solid var(--main-color)
+}
+.vaardigheden .vh-box .vh-cell div{
+    background-color: rgba(255, 152, 0, .7);
+    color: var(--default-color);
+    height: 100%;
+    position: relative;
+    border-radius:  0px 200px 200px 0px ;
+}
+.vaardigheden .vh-box:first-of-type .vh-cell div{
+    width: 95%;
+}
+.vaardigheden .vh-box:nth-of-type(2) .vh-cell div{
+    width: 70%;
+}
+.vaardigheden .vh-box:nth-of-type(3) .vh-cell div{
+    width: 95%;
+}
+.vaardigheden .vh-box:nth-of-type(4) .vh-cell div{
+    width: 80%;
+}
+.vaardigheden .vh-box:nth-of-type(5) .vh-cell div{
+    width: 30%;
+}
+.vaardigheden .vh-box:nth-of-type(6) .vh-cell div{
+    width: 80%;
+}
+.vaardigheden .vh-box:nth-of-type(7) .vh-cell div{
+    width: 95%;
+}
+.vaardigheden .vh-box:nth-of-type(8) .vh-cell div{
+    width: 60%;
+}
+.vaardigheden .vh-box .vh-cell div span{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: var(--main-color);
+
+}
+
+@media ( max-width : 767px) and (min-width : 200px),
+(min-width : 768px) and (max-width : 992px){
+    .vaardigheden .vh-box{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .vaardigheden .vh-box label{
+        width: 80%;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+    .vaardigheden .vh-box .vh-cell{
+        width: 80%;
+    }
+}
+@media (min-width : 992px)
+{
+    .vaardigheden .vh-box{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .vaardigheden .vh-box label{
+        width: 12%;
+        text-align: left;
+        transition: all .8s ease-in-out;
+    }
+    .vaardigheden .vh-box:hover label{
+        color: var(--main-color) !important;
+        transform: scale(1.1);
+    }
+    .vaardigheden .vh-box .vh-cell div span{
+        transition: var(--default-transition);
+    }
+    .vaardigheden .vh-box:hover .vh-cell div span{
+        transform: scale(1.3);
+    }
+    .vaardigheden .vh-box .vh-cell{
+        width: 80%;
+    }
+}
+
+@media (min-width : 1200px)
+{
+    
+}
+/* end vaardigheden */
+/*=================================================================================*/
+/* start werkervaring */
+.werkervaring{
+    padding: var(--default-padding)
+}
+.werkervaring div{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.werkervaring ul,
+.werkervaring ul ol{
+    list-style: none;
+    
+}
+.werkervaring ul{
+    padding: 0;
+    margin: 0;
+}
+.werkervaring ul > li{
+    position: relative;
+    margin: 15px auto;
+}
+.werkervaring ul > li::before{
+    content: '\f101';
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+}
+.werkervaring ul > li span{
+    text-transform: capitalize;
+    font-size: var(--default-fontSize);
+}
+.werkervaring ul li ol li{
+    position: relative;
+}
+
+.werkervaring ul li ol li::before{
+    content: '\f105';
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 30px;
+}
+/* end werkervaring */
 /*=================================================================================*/
 /* start global media */
 @media ( max-width : 767px) and (min-width : 200px)
