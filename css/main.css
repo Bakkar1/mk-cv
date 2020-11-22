@@ -772,6 +772,9 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .vaardigheden .vh-box:nth-of-type(8) .vh-cell div{
     width: 60%;
 }
+.vaardigheden .vh-box:nth-of-type(9) .vh-cell div{
+    width: 70%;
+}
 .vaardigheden .vh-box .vh-cell div span{
     position: absolute;
     top: -10px;
@@ -845,7 +848,6 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .werkervaring ul,
 .werkervaring ul ol{
     list-style: none;
-    
 }
 .werkervaring ul{
     padding: 0;
@@ -856,21 +858,38 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     margin: 15px auto;
 }
 .werkervaring ul > li::before{
-    content: '\f101';
+    content: '\f56b';
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -30px;
     width: 30px;
     height: 30px;
+    font-size: var(--default-fontSize);
+    transition: var(--default-transition);
+}
+.werkervaring ul > li:first-of-type::before{
+    content: '\f61f';
+}
+.werkervaring ul > li:nth-of-type(2)::before{
+    content: '\f51a';
+}
+.werkervaring ul > li:hover::before{
+    color: var(--main-color);
+    transform: scale(1.2);
 }
 .werkervaring ul > li span{
     text-transform: capitalize;
     font-size: var(--default-fontSize);
+    margin: 10px 0;
+    display: block;
+
 }
 .werkervaring ul li ol li{
     position: relative;
+    margin: 5px 0;
+    text-transform: capitalize;
 }
 
 .werkervaring ul li ol li::before{
@@ -882,6 +901,11 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     left: -20px;
     width: 20px;
     height: 30px;
+    transition: color .5s,left 2s;
+}
+.werkervaring ul li:hover ol li::before{
+    color: var(--main-color);
+    left : -12px
 }
 /* end werkervaring */
 /*=================================================================================*/
