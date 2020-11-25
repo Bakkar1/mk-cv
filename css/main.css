@@ -909,6 +909,55 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 /* end werkervaring */
 /*=================================================================================*/
+/* start talen  */
+.talen{
+    padding: var(--default-padding);
+    background-image: url('../images/talen.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: var(--overly-color);
+    --table-color: #EEE;
+}
+.talen h3{
+    color: var(--table-color);
+}
+.talen h3::after{
+    background-color: var(--table-color);
+}
+.talen div{
+    display: flex;
+    justify-content: center;
+}
+.talen table{
+    border: 2px solid rgba(0, 0, 0, .8);
+    border-spacing: 0;
+    border-radius: 5px;
+}
+.talen table tr{
+    font-size: var(--default-fontSize);
+}
+.talen table tr:nth-of-type(odd){
+    color: var(--main-color);
+    background-color: rgba(0, 0, 0, .4);
+    text-shadow: 0.5px 0.5px 6px var(--main-color),
+    -0.5px -0.5px 6px var(--main-color);
+}
+.talen table tr:nth-of-type(even){
+    color: var(--ander-colo);
+    background-color: rgba(0, 0, 0, .2);
+    text-shadow: 0.5px 0.5px 6px var(--ander-colo),
+    -0.5px -0.5px 6px var(--ander-colo);
+}
+.talen table tr td {
+    border: 2px solid rgba(0, 0, 0, .5);
+    text-align: center;
+    padding: 10px 15px;
+    text-transform: capitalize;
+}
+
+/* end talen */
+/*=================================================================================*/
 /* start global media */
 @media ( max-width : 767px) and (min-width : 200px)
 {
