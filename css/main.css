@@ -957,6 +957,94 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 
 /* end talen */
+/* start contact me  */
+.contact-me{
+    padding: var(--default-padding);
+    background-color: var(--overly-color);
+    background-blend-mode: overlay;
+    background-image: url('../images/contactme.jpg');
+    background-size: cover;
+    background-position: center;
+    --contact-meColor: #8e8e8e;
+    color: var(--contact-meColor);
+}
+.contact-me h3::after{
+    background-color: var(--contact-meColor);
+}
+.contact-me > div{
+    display: flex;
+    justify-content: center;
+}
+.contact-me form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+    background-color: var(--overly-color);
+    overflow: hidden;
+}
+.contact-me form input:not(:last-child),
+.contact-me form textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--contact-meColor);
+    margin-bottom: 20px;
+    color: inherit;
+    outline: none;
+    padding: 5px 10px;
+    transition: var(--default-transition);
+}
+.contact-me form input:not(:last-child):focus,
+.contact-me form textarea:focus{
+    border-bottom: 1px solid rgba(102,175,233,1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 
+        0 0 8px rgba(102,175,233,.8);
+    border-radius: 5px;
+}
+.contact-me form input{
+    height: 30px;
+}
+.contact-me form textarea{
+    max-width: 100%;
+    min-width: 40%;
+    min-height: 60px;
+}
+.contact-me form input[type="submit"]{
+    color: var(--contact-meColor);
+    background-color: transparent;
+    border: 1px solid var(--contact-meColor);
+    border-radius: 5px;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+    transition: var(--default-transition);
+    margin: 10px 5px;
+}
+.contact-me form input[type="submit"]:hover{
+    box-shadow: 1px 1px 6px 1px var(--main-color);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+@media (min-width : 992px){
+    .contact-me form{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact-me form input:first-of-type,
+    .contact-me form input:nth-of-type(2){
+        width: 48%;
+        display: inline-block;
+    }
+    .contact-me form input:first-of-type{
+        margin-right: 4%;
+    }
+    .contact-me form input:nth-of-type(3),
+    .contact-me form input:nth-of-type(4),
+    .contact-me form textarea{
+        width: 100%;
+    }
+}
+/* end contact me  */
 /*=================================================================================*/
 /* start global media */
 @media ( max-width : 767px) and (min-width : 200px)
