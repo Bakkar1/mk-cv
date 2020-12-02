@@ -785,7 +785,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     border: 1px solid var(--main-color);
     border-radius: 50%;
     background-color: var(--main-color);
-
+    /* overflow: hidden; */
 }
 
 @media ( max-width : 767px) and (min-width : 200px),
@@ -940,14 +940,10 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .talen table tr:nth-of-type(odd){
     color: var(--main-color);
     background-color: rgba(0, 0, 0, .4);
-    text-shadow: 0.5px 0.5px 6px var(--main-color),
-    -0.5px -0.5px 6px var(--main-color);
 }
 .talen table tr:nth-of-type(even){
     color: var(--ander-colo);
     background-color: rgba(0, 0, 0, .2);
-    text-shadow: 0.5px 0.5px 6px var(--ander-colo),
-    -0.5px -0.5px 6px var(--ander-colo);
 }
 .talen table tr td {
     border: 2px solid rgba(0, 0, 0, .5);
@@ -1045,6 +1041,91 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 /* end contact me  */
+/* start footer  */
+footer{
+    background-color: var(--black-color);
+    color: #8e8e8e;
+    padding: 0 30px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+footer div{
+    font-size: var(--default-fontSize);
+}
+footer div p::first-letter{
+    font-family: ui-sans-serif;
+}
+footer div p span{
+    color: var(--main-color)
+}
+footer > p{
+    margin: 0;
+}
+footer a{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 5px 10px;
+    transition: var(--default-transition);
+}
+footer a:hover{
+    color: var(--main-color);
+}
+footer a::after{
+    content: '\f105';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    font-size: var(--default-fontSize);
+    text-align: center;
+
+    color: inherit;
+}
+footer a:hover::after{
+    content: '\f106';
+}
+footer a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0;
+    height: 28px;
+    width: 28px;
+    border: 1px solid #8e8e8e;
+    border-radius: 50%;
+    transition: all .2s;
+}
+footer a:hover::before{
+    width: calc(100% + 20px);
+    border-radius: 10px ;
+    border: 1px solid var(--main-color);
+}
+@media ( max-width : 767px){
+    footer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 200px;
+    }
+    footer a{
+        margin-left: 25px;
+    }
+    footer a::before{
+        width: calc(100% + 20px);
+        border-radius: 10px ;
+    }footer a::after{
+        content: '\f106';
+    }
+}
+/* end footer  */
 /*=================================================================================*/
 /* start global media */
 @media ( max-width : 767px) and (min-width : 200px)
