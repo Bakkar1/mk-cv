@@ -786,7 +786,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     border: 1px solid var(--main-color);
     border-radius: 50%;
     background-color: var(--main-color);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 @media ( max-width : 767px) and (min-width : 200px),
@@ -876,10 +876,6 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .werkervaring ul > li:nth-of-type(2)::before{
     content: '\f51a';
 }
-.werkervaring ul > li:hover::before{
-    color: var(--main-color);
-    transform: scale(1.2);
-}
 .werkervaring ul > li span{
     text-transform: capitalize;
     font-size: var(--default-fontSize);
@@ -904,9 +900,41 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     height: 30px;
     transition: color .5s,left 2s;
 }
-.werkervaring ul li:hover ol li::before{
-    color: var(--main-color);
-    left : -12px
+@media ( max-width : 767px),
+(min-width : 768px) and (max-width : 992px){
+    .werkervaring ul > li::before{
+        color: var(--main-color);
+        transform: scale(1.2);
+    }
+    .werkervaring ul li ol li::before{
+        color: var(--main-color);
+        left : -12px
+    }
+}
+@media (min-width : 992px){
+    .werkervaring ul > li:nth-of-type(odd){
+        right: 60%
+    }
+    .werkervaring ul > li:nth-of-type(even){
+        left: 60%;
+    }
+    .werkervaring ul > li:hover::before{
+        color: var(--main-color);
+        transform: scale(1.2);
+    }
+    .werkervaring ul li ol li:first-of-type::before{
+        transition: left .6s ease-in-out;
+    }
+    .werkervaring ul li ol li:nth-of-type(2)::before{
+        transition: left .8s ease-in-out;
+    }
+    .werkervaring ul li ol li:last-child::before{
+        transition: left 1s ease-in-out;
+    }
+    .werkervaring ul li:hover ol li::before{
+        color: var(--main-color);
+        left : -12px
+    }
 }
 /* end werkervaring */
 /*=================================================================================*/
@@ -952,7 +980,6 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     padding: 10px 15px;
     text-transform: capitalize;
 }
-
 /* end talen */
 /* start getuigenissen */
 .getuigenissen{
