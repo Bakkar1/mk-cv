@@ -51,6 +51,7 @@ body{
 .myHeading{
     margin:auto;
     width: fit-content;
+    width: -moz-fit-content;
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
@@ -68,7 +69,59 @@ body{
     background-color: var(--black-color);
     transform: scale(.5);
 }
-
+/*================================================================================*/
+/* start navigation bullets */
+.nav-bullets{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 10;
+}
+.nav-bullets .bullet{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+    position: relative;
+    transition: var(--default-transition);
+}
+.nav-bullets .bullet:hover{
+    border: 1px solid transparent;
+    background-color: var(--main-color);
+    transform: scale(1.2);
+}
+.nav-bullets .bullet .tooltip{
+    position: absolute;
+    width: 120px;
+    color: var(--default-color);
+    padding: 4px 10px;
+    right: 40px;
+    top:0;
+    background-color: var(--main-color);
+    border-radius: 5px 0 0 5px;
+    transition: all .2s ease-in-out;
+    transform: translateX(180px);
+    text-align: center;
+}
+.nav-bullets .bullet:hover .tooltip{
+    transform: translateX(0px);
+}
+.nav-bullets .bullet .tooltip::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -26px;
+    border-style: solid;
+    border-width: 13px;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent transparent var(--main-color);
+}
+/* end navigation bullets */
 /*================================================================================*/
 /* start header */
 header{
@@ -76,6 +129,7 @@ header{
     background-color: #000;
     color: var(--gray-color);
     position: relative;
+    z-index: 20;
 }
 header nav{
     display: flex;
