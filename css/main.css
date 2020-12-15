@@ -73,20 +73,24 @@ body{
 /* start navigation bullets */
 .nav-bullets{
     position: fixed;
-    right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
+    width: 30px;
+
+    box-shadow: inset 0 1px 1px rgba(255, 152, 0, .5), 
+        0 0 8px rgba(255, 152, 0, .5);
     z-index: 10;
+    border-radius: 10px;
 }
 .nav-bullets .bullet{
     width: 20px;
     height: 20px;
-    border: 1px solid var(--main-color);
+    border: 2px solid var(--main-color);
     border-radius: 50%;
     margin: 10px auto;
     cursor: pointer;
     position: relative;
+    display: block;
     transition: var(--default-transition);
 }
 .nav-bullets .bullet:hover{
@@ -97,29 +101,45 @@ body{
 .nav-bullets .bullet .tooltip{
     position: absolute;
     width: 120px;
-    color: var(--default-color);
-    padding: 4px 10px;
+    padding: 5px 10px;
     right: 40px;
-    top:0;
-    background-color: var(--main-color);
-    border-radius: 5px 0 0 5px;
-    transition: all .2s ease-in-out;
-    transform: translateX(180px);
+    top: -5px;
+    border-radius: 5px;
+    transition: var(--default-transition);
+    transform: scale(0);
+    transform-origin: right;
     text-align: center;
+    pointer-events: none;
+    background-color: rgba(255, 152, 0, .5);
+    text-transform: capitalize;
+    color: var(--black-color);
 }
 .nav-bullets .bullet:hover .tooltip{
-    transform: translateX(0px);
+    transform: scale(1);
 }
 .nav-bullets .bullet .tooltip::after{
     content: '';
     position: absolute;
-    top: 0px;
-    right: -26px;
+    top: 4px;
+    right: -20px;
     border-style: solid;
-    border-width: 13px;
+    border-width: 10px;
     height: 0;
     width: 0;
-    border-color: transparent transparent transparent var(--main-color);
+    border-color: transparent transparent transparent rgba(255, 152, 0, .5);
+}
+@media (min-width : 992px)
+{
+    .nav-bullets{
+        right: 5px;
+    }
+}
+
+@media (min-width : 1200px)
+{
+    .nav-bullets{
+        right: 15px;
+    }
 }
 /* end navigation bullets */
 /*================================================================================*/
@@ -256,12 +276,7 @@ header .naar-volgend i{
 }
 
 /* header media */
-@media(min-width : 501px){
 
-}
-@media(min-width : 1001px){
-
-}
 
 @media ( max-width : 767px) and (min-width : 200px),
 (min-width : 768px) and (max-width: 991px)
@@ -337,11 +352,14 @@ header .naar-volgend i{
         justify-content: space-evenly;
         align-items: center;
     }
-    header .ik img:hover{
+    header .ik div > a{
+        width: 40%;
+    }
+    header .ik a img:hover{
         box-shadow: 0px 16px 30px 0px var(--main-color),
         0px -16px 30px 0px var(--main-color);
     }
-    header .ik img:active{
+    header .ik a img:active{
         box-shadow: 0 0 0 0;
         border: 1px solid var(--main-color);
         border-radius: 50%;
@@ -677,9 +695,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         transform: translateX(-50%);
     }
 }
-@media (min-width : 768px){
 
-}
 @media (min-width : 992px){
     .timeline .timeline-content .left::before{
         right: -35px;
@@ -1008,7 +1024,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .talen h3::after{
     background-color: var(--table-color);
 }
-.talen div{
+.talen > div{
     display: flex;
     justify-content: center;
 }
@@ -1033,6 +1049,27 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     text-align: center;
     padding: 10px 15px;
     text-transform: capitalize;
+}
+
+.talen .visibale-xs{
+    color: var(--default-color);
+    text-transform: capitalize;
+    font-size: var(--default-fontSize)
+}
+.talen .visibale-xs .taal:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.talen .visibale-xs .taal span:first-child{
+    display: inline-block;
+    width: 120px;
+    position: relative;
+}
+.talen .visibale-xs .taal span:first-child::after{
+    content: ':';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: var(--default-fontSize);
 }
 /* end talen */
 /* start getuigenissen */
@@ -1212,7 +1249,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .contact-me form{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     padding: 20px;
     background-color: var(--overly-color);
     overflow: hidden;
@@ -1227,6 +1264,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     outline: none;
     padding: 5px 10px;
     transition: var(--default-transition);
+    border-radius: 5px;
 }
 .contact-me form input:not(:last-child):focus,
 .contact-me form textarea:focus{
@@ -1263,6 +1301,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     .contact-me form{
         flex-direction: row;
         flex-wrap: wrap;
+        width: 80%;
     }
     .contact-me form input:first-of-type,
     .contact-me form input:nth-of-type(2){
@@ -1366,7 +1405,7 @@ footer a:hover::before{
 /* end footer  */
 /*=================================================================================*/
 /* start global media */
-@media ( max-width : 767px) and (min-width : 200px)
+@media ( max-width : 767px)
 {
     .visibale-xs
     {
