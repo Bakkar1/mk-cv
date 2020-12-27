@@ -26,6 +26,9 @@ body{
 .container{
     margin: auto;
 }
+.hidden-Y{
+    overflow-y: hidden;
+}
 
 .visibale-xs, /*hadak elemnt ghaykon mkhfi fga3 lmedia ila l media li khtaritha lih ghayban fiha*/
 .visibale-sm,
@@ -106,6 +109,7 @@ body{
     top: -5px;
     border-radius: 5px;
     transition: var(--default-transition);
+    transition-timing-function: cubic-bezier(0.05, 0.81, 0.05, 0.95);
     transform: scale(0);
     transform-origin: right;
     text-align: center;
@@ -113,6 +117,7 @@ body{
     background-color: rgba(255, 152, 0, .5);
     text-transform: capitalize;
     color: var(--black-color);
+    font-weight: bold;
 }
 .nav-bullets .bullet:hover .tooltip{
     transform: scale(1);
@@ -450,6 +455,8 @@ article.over-me .content section:last-of-type .info p span{
     font-size: var(--default-fontSize);
     color: var(--black-color);
     text-transform: capitalize;
+    width: 105px;
+    display: inline-block;
 }
 article.over-me .content section:last-of-type .info p span::before{
     font-weight: 900;
@@ -457,6 +464,13 @@ article.over-me .content section:last-of-type .info p span::before{
     position: absolute;
     bottom: 0;
     left: -5px;
+}
+article.over-me .content section:last-of-type .info p span::after{
+    content: ":";
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-size: var(--default-fontSize);
 }
 article.over-me .content section:last-of-type .info p:first-of-type span::before{
     content: '\f007';
@@ -538,7 +552,12 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         display: inline-block;
     }
 }
-
+@media (min-width : 992px) and (max-width : 1199px){
+    article.over-me .content section:last-of-type .info p:first-of-type span,
+    article.over-me .content section:last-of-type .info p:nth-of-type(3) span{
+        width: 80px !important;
+    }
+}
 @media (min-width : 992px)
 {
     article.over-me .content section:first-of-type{
@@ -832,7 +851,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     width: 80%;
 }
 .vaardigheden .vh-box:nth-of-type(5) .vh-cell div{
-    width: 30%;
+    width: 55%;
 }
 .vaardigheden .vh-box:nth-of-type(6) .vh-cell div{
     width: 80%;
