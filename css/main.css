@@ -235,6 +235,7 @@ header .ik .ik-content .h2{
     background-size: cover;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
 }
 header .ik .ik-content p{
@@ -243,6 +244,7 @@ header .ik .ik-content p{
 }
 header .ik .ik-content a{
     width: fit-content;
+    width: -moz-fit-content;
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid var(--main-color);
@@ -385,9 +387,9 @@ article.over-me{
     background-color: rgb(142,142,142, .2);
     font-family: 'Lato', sans-serif
 }
-article.over-me h2{
+/* article.over-me h2{
 
-}
+} */
 article.over-me .content{
     display: flex;
 }
@@ -440,6 +442,13 @@ article.over-me .content section:last-of-type h3{
     text-transform: capitalize;
     color: var(--main-color);
     font-size: var(--default-fontSize);
+}
+article.over-me .content section:last-of-type > p {
+    font-size: var(--default-fontSize);
+}
+article.over-me .content section:last-of-type > p::first-letter,
+article.over-me .content section:last-of-type > p span{
+    text-transform: capitalize;
 }
 article.over-me .content section:last-of-type .info{
     display: flex;
@@ -824,7 +833,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 .vaardigheden .vh-box label{
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .vaardigheden .vh-box .vh-cell{
     height: 10px;
@@ -860,10 +869,13 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(8) .vh-cell div{
-    width: 60%;
+    width: 80%;
 }
 .vaardigheden .vh-box:nth-of-type(9) .vh-cell div{
     width: 70%;
+}
+.vaardigheden .vh-box:last-of-type .vh-cell div{
+    width: 75%;
 }
 .vaardigheden .vh-box .vh-cell div span{
     position: absolute;
@@ -906,7 +918,6 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
     .vaardigheden .vh-box:hover label{
         color: var(--main-color) !important;
-        transform: scale(1.1);
     }
     .vaardigheden .vh-box .vh-cell div span{
         transition: var(--default-transition);
@@ -1078,12 +1089,12 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .talen .visibale-xs .taal:not(:last-of-type){
     margin-bottom: 20px;
 }
-.talen .visibale-xs .taal span:first-child{
+.talen .visibale-xs .taal span:first-of-type{
     display: inline-block;
     width: 120px;
     position: relative;
 }
-.talen .visibale-xs .taal span:first-child::after{
+.talen .visibale-xs .taal span:first-of-type::after{
     content: ':';
     position: absolute;
     top: 0;
