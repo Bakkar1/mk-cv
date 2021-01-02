@@ -133,14 +133,14 @@ body{
     width: 0;
     border-color: transparent transparent transparent rgba(255, 152, 0, .5);
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     .nav-bullets{
         right: 5px;
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
     .nav-bullets{
         right: 15px;
@@ -285,7 +285,7 @@ header .naar-volgend i{
 /* header media */
 
 
-@media ( max-width : 767px) and (min-width : 200px),
+@media screen and ( max-width : 767px) and (min-width : 200px),
 (min-width : 768px) and (max-width: 991px)
 {
     header nav .logo{
@@ -348,7 +348,7 @@ header .naar-volgend i{
         margin: auto;
     }
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     header nav ul li{
         display: inline-block;
@@ -374,7 +374,7 @@ header .naar-volgend i{
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
 
 }
@@ -526,10 +526,13 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 
 
-@media ( max-width : 767px) and (min-width : 200px)
+@media screen and ( max-width : 767px)
 {
     article.over-me .content section{
         width: 95% !important;
+    }
+    article.over-me .content section:last-of-type .info p:not(:last-of-type) span{
+        width: 85px;
     }
     article.over-me .content section:last-of-type .buttons a:first-of-type,
     article.over-me .content section:last-of-type .buttons a button{
@@ -539,7 +542,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         text-align: center;
     }
 }
-@media ( max-width : 767px) and (min-width : 200px),
+@media screen and ( max-width : 767px),
 (min-width : 768px)
 {
     article.over-me .content{
@@ -561,13 +564,13 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         display: inline-block;
     }
 }
-@media (min-width : 992px) and (max-width : 1199px){
+@media screen and (min-width : 992px) and (max-width : 1199px){
     article.over-me .content section:last-of-type .info p:first-of-type span,
     article.over-me .content section:last-of-type .info p:nth-of-type(3) span{
         width: 80px !important;
     }
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     article.over-me .content section:first-of-type{
         width: 40%;
@@ -596,7 +599,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
 
 }
@@ -682,7 +685,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     line-height: 1.6;
     text-transform: capitalize;
 }
-@media ( max-width : 767px),
+@media screen and ( max-width : 767px),
 (min-width : 768px) and (max-width: 991px){
     .timeline .timeline-content{
         padding: 0;
@@ -724,7 +727,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 
-@media (min-width : 992px){
+@media screen and (min-width : 992px){
     .timeline .timeline-content .left::before{
         right: -35px;
         top: 20px;
@@ -778,7 +781,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 
-@media (min-width : 1200px){
+@media screen and (min-width : 1200px){
     .timeline .timeline-content {
         padding: 40px 20px;
     }
@@ -890,7 +893,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     overflow: hidden;
 }
 
-@media ( max-width : 767px) and (min-width : 200px),
+@media screen and ( max-width : 767px) and (min-width : 200px),
 (min-width : 768px) and (max-width : 992px){
     .vaardigheden .vh-box{
         display: flex;
@@ -905,7 +908,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         width: 80%;
     }
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     .vaardigheden .vh-box{
         display: flex;
@@ -930,7 +933,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
     
 }
@@ -1000,7 +1003,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     height: 30px;
     transition: color .5s,left 2s;
 }
-@media ( max-width : 767px),
+@media screen and ( max-width : 767px),
 (min-width : 768px) and (max-width : 992px){
     .werkervaring ul > li::before{
         color: var(--main-color);
@@ -1011,7 +1014,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         left : -12px
     }
 }
-@media (min-width : 992px){
+@media screen and (min-width : 992px){
     .werkervaring ul > li:nth-of-type(odd){
         right: 60%
     }
@@ -1152,7 +1155,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     text-align: center;
     width: 80%;
 }
-@media ( max-width : 767px),
+@media screen and ( max-width : 767px),
 (min-width : 768px) and (max-width : 992px){
     .getuigenissen div{
         display: flex;
@@ -1189,7 +1192,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         color: var(--blue-color);
     }
 }
-@media (min-width : 768px) and (max-width : 992px)
+@media screen and (min-width : 768px) and (max-width : 992px)
 {
     .getuigenissen div{
         display: flex;
@@ -1207,7 +1210,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         margin-right: 2%;
     }
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     .getuigenissen div{
         display: flex;
@@ -1253,7 +1256,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
     
 }
@@ -1327,7 +1330,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     border: 1px solid var(--main-color);
     color: var(--main-color);
 }
-@media (min-width : 992px){
+@media screen and (min-width : 992px){
     .contact-me form{
         flex-direction: row;
         flex-wrap: wrap;
@@ -1415,7 +1418,7 @@ footer a:hover::before{
     border-radius: 10px ;
     border: 1px solid var(--main-color);
 }
-@media ( max-width : 767px){
+@media screen and ( max-width : 767px){
     footer{
         flex-direction: column;
         justify-content: space-evenly;
@@ -1435,7 +1438,7 @@ footer a:hover::before{
 /* end footer  */
 /*=================================================================================*/
 /* start global media */
-@media ( max-width : 767px)
+@media screen and ( max-width : 767px)
 {
     .visibale-xs
     {
@@ -1446,13 +1449,13 @@ footer a:hover::before{
         display: none ;
     }
 }
-@media (min-width : 768px) and (max-width : 992px){
+@media screen and (min-width : 768px) and (max-width : 992px){
     .visibale-sm
     {
         display: block ;
     }
 }
-@media (min-width : 768px)
+@media screen and (min-width : 768px)
 {
     .container
     {
@@ -1463,7 +1466,7 @@ footer a:hover::before{
         display: none ;
     }
 }
-@media (min-width : 992px)
+@media screen and (min-width : 992px)
 {
     .container
     {
@@ -1479,7 +1482,7 @@ footer a:hover::before{
     }
 }
 
-@media (min-width : 1200px)
+@media screen and (min-width : 1200px)
 {
     .container
     {
