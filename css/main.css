@@ -854,7 +854,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(2) .vh-cell div{
-    width: 70%;
+    width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(3) .vh-cell div{
     width: 95%;
@@ -863,19 +863,42 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     width: 80%;
 }
 .vaardigheden .vh-box:nth-of-type(5) .vh-cell div{
-    width: 55%;
+    width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(6) .vh-cell div{
-    width: 80%;
+    width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(7) .vh-cell div{
     width: 95%;
 }
 .vaardigheden .vh-box:nth-of-type(8) .vh-cell div{
-    width: 80%;
+    width: 70%;
 }
 .vaardigheden .vh-box:nth-of-type(9) .vh-cell div{
-    width: 70%;
+    width: 95%;
+}
+
+.vaardigheden .vh-box:nth-of-type(10) .vh-cell div{
+    width: 90%;
+}
+.vaardigheden .vh-box:nth-of-type(11) .vh-cell div{
+    width: 90%;
+}
+.vaardigheden .vh-box:nth-of-type(12) .vh-cell div{
+    width: 80%;
+}
+.vaardigheden .vh-box:nth-of-type(13) .vh-cell div{
+    width: 90%;
+}
+.vaardigheden .vh-box:nth-of-type(14) .vh-cell div{
+    width: 90%;
+}
+.vaardigheden .vh-box:nth-of-type(15) .vh-cell div{
+    width: 90%;
+}
+
+.vaardigheden .vh-box:nth-last-of-type(2) .vh-cell div{
+    width: 90%;
 }
 .vaardigheden .vh-box:last-of-type .vh-cell div{
     width: 75%;
