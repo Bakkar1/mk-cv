@@ -896,7 +896,10 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     width: 95%;
 }
 
-.vaardigheden .vh-box:nth-last-of-type(2) .vh-cell div{
+.vaardigheden .vh-box:nth-of-type(16) .vh-cell div{
+    width: 65%;
+}
+.vaardigheden .vh-box:nth-of-type(17) .vh-cell div{
     width: 95%;
 }
 .vaardigheden .vh-box:last-of-type .vh-cell div{
