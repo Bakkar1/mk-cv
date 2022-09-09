@@ -997,10 +997,10 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     transition: var(--default-transition);
 }
 .werkervaring ul > li:first-of-type::before{
-    content: '\f51a';
+    content: '\f56b';
 }
 .werkervaring ul > li:nth-of-type(2)::before{
-    content: '\f56b';
+    content: '\f51a';
 }
 .werkervaring ul > li:last-of-type::before{
     content: '\f121';
@@ -1401,17 +1401,17 @@ footer div p span{
 footer > p{
     margin: 0;
 }
-footer a{
+footer a.naar-b{
     position: relative;
     cursor: pointer;
     display: block;
     padding: 5px 10px;
     transition: var(--default-transition);
 }
-footer a:hover{
+footer a.naar-b:hover{
     color: var(--main-color);
 }
-footer a::after{
+footer a.naar-b::after{
     content: '\f105';
     position: absolute;
     left: -18px;
@@ -1426,10 +1426,10 @@ footer a::after{
 
     color: inherit;
 }
-footer a:hover::after{
+footer a.naar-b:hover::after{
     content: '\f106';
 }
-footer a::before{
+footer a.naar-b::before{
     content: '';
     position: absolute;
     left: -20px;
@@ -1440,7 +1440,7 @@ footer a::before{
     border-radius: 50%;
     transition: all .2s;
 }
-footer a:hover::before{
+footer a.naar-b:hover::before{
     width: calc(100% + 20px);
     border-radius: 10px ;
     border: 1px solid var(--main-color);
@@ -1452,13 +1452,13 @@ footer a:hover::before{
         align-items: center;
         height: 200px;
     }
-    footer a{
+    footer a.naar-b{
         margin-left: 25px;
     }
-    footer a::before{
+    footer a.naar-b::before{
         width: calc(100% + 20px);
         border-radius: 10px ;
-    }footer a::after{
+    }footer a.naar-b::after{
         content: '\f106';
     }
 }
