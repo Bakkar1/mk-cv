@@ -401,6 +401,12 @@ article.over-me .content section:first-of-type{
 }
 article.over-me .content section:first-of-type div{
     border-radius: 5px 5px 0 0;
+    background-image: url('../images/IMG_8085.JPG');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
 }
 article.over-me .content section:first-of-type img{
     transition: var(--default-transition);
@@ -580,8 +586,8 @@ article.over-me .content section:last-of-type .buttons a button:hover{
         width: 100%;
         height: 400px;
     }
-    article.over-me .content section:first-of-type img:hover{
-        transform: scale(1.2);
+    article.over-me .content section:first-of-type div:hover{
+        
     }
     article.over-me .content section:last-of-type{
         width: calc(60% - 40px);
@@ -837,7 +843,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 .vaardigheden .vh-box label{
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .vaardigheden .vh-box .vh-cell{
     height: 10px;
@@ -851,6 +857,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     position: relative;
     border-radius:  0px 200px 200px 0px ;
 }
+/*
 .vaardigheden .vh-box:first-of-type .vh-cell div{
     width: var(--max-vardig);
 }
@@ -903,6 +910,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .vaardigheden .vh-box:nth-of-type(17) .vh-cell div{
     width: 75%;
 }
+*/
 .vaardigheden .vh-box .vh-cell div span{
     position: absolute;
     top: -4px;
