@@ -450,6 +450,7 @@ article.over-me .content section:last-of-type h3{
     font-size: var(--default-fontSize);
 }
 article.over-me .content section:last-of-type > p {
+    padding: 0 10px;
     font-size: var(--default-fontSize);
 }
 article.over-me .content section:last-of-type > p::first-letter,
