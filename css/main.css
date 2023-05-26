@@ -1311,6 +1311,22 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     
 }
 /* end getuigenissen */
+/* Start About This Resume*/
+.this-resume{
+    padding: var(--default-padding);
+    background-color: rgb(0, 0, 0, .3);
+}
+.this-resume div{
+    width: 50vw;
+    margin: auto; 
+    text-align: center;
+    line-height: 1.4;
+    font-size: 18px;
+}
+.this-resume div p a{
+    color: var(--blue-color)
+}
+/* End About This Resume*/
 /* start contact me  */
 .contact-me{
     padding: var(--default-padding);
