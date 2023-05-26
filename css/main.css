@@ -502,6 +502,8 @@ article.over-me .content section:last-of-type .info p:nth-of-type(4) span::befor
 }
 article.over-me .content section:last-of-type .buttons{
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 article.over-me .content section:last-of-type .buttons a:first-of-type,
 article.over-me .content section:last-of-type .buttons a button{
@@ -512,6 +514,8 @@ article.over-me .content section:last-of-type .buttons a button{
     transition: var(--default-transition);
     font-size: var(--default-fontSize);
     cursor: pointer;
+    width: 200px;
+    text-align: center;
 }
 article.over-me .content section:last-of-type .buttons a:first-of-type{
     border: 1px solid var(--main-color);
@@ -1010,6 +1014,9 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 }
 .werkervaring ul > li:nth-of-type(2)::before{
     content: '\f51a';
+}
+.werkervaring ul > li:nth-of-type(3)::before{
+    content: '\f121';
 }
 .werkervaring ul > li:last-of-type::before{
     content: '\f121';
