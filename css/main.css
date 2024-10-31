@@ -991,6 +991,9 @@ article.over-me .content section:last-of-type .buttons a button:hover{
 .werkervaring ul > li:nth-of-type(4)::before{
     content: '\f121';
 }
+.werkervaring ul > li:nth-of-type(5)::before{
+    content: '\f121';
+}
 .werkervaring ul > li:last-of-type::before{
     content: '\f121';
 }
