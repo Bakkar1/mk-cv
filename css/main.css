@@ -968,7 +968,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     margin: 15px auto;
 }
 .werkervaring ul > li::before{
-    content: '\f56b';
+    content: '\f121';
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
     position: absolute;
@@ -979,24 +979,7 @@ article.over-me .content section:last-of-type .buttons a button:hover{
     font-size: var(--default-fontSize);
     transition: var(--default-transition);
 }
-.werkervaring ul > li:first-of-type::before{
-    content: '\f56b';
-}
-.werkervaring ul > li:nth-of-type(2)::before{
-    content: '\f51a';
-}
-.werkervaring ul > li:nth-of-type(3)::before{
-    content: '\f121';
-}
-.werkervaring ul > li:nth-of-type(4)::before{
-    content: '\f121';
-}
-.werkervaring ul > li:nth-of-type(5)::before{
-    content: '\f121';
-}
-.werkervaring ul > li:last-of-type::before{
-    content: '\f121';
-}
+
 .werkervaring ul > li span{
     text-transform: capitalize;
     font-size: var(--default-fontSize);
